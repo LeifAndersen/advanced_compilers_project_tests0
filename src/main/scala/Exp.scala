@@ -13,7 +13,11 @@ object Exp {
         val vars = params.toList map { case SSymbol(id) => id }
         LambdaExp(vars,from(body))
       }
-       
+
+      case SList(SSymbol("λ"),params,body) => {
+        val vars = params.toList map { case SSymbol(id) => id }
+        LambdaExp(vars,from(body))
+      }
 
       // Conditionals:
       case STrue() => BoolExp(true)
