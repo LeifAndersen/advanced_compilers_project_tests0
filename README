@@ -1,0 +1,5 @@
+Requires Racket (5.3 should work), and sbt.
+
+make answers - to build test suite
+make test    - run tests
+make run     - run program
