@@ -1,10 +1,10 @@
 all: run
 
 run:
-	sbt run
+	JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF8' sbt run
 
 test:
-	sbt test:run
+	JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF8' sbt test:run
 
 answers:
 	for i in tests/*.rkt; \
