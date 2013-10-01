@@ -23,7 +23,7 @@
 //        |  (cdr  <exp>)
 //        |  (pair? <exp>)
 //        |  (null? <exp>)
-//        |  '()
+//        |  (quote ())
 //
 //        |  (<exp> <exp> ...)
 //

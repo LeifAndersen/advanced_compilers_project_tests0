@@ -37,7 +37,7 @@
 ;;        |  (cdr  <exp>)
 ;;        |  (pair? <exp>)
 ;;        |  (null? <exp>)
-;;        |  '()
+;;        |  (quote ())
 
 ;;        |  (<exp> <exp> ...)
 
@@ -165,7 +165,7 @@
                                     (zero? (- ,y ,x))))]
     
     ; Lists:
-    [ (quote '())         NIL]
+    [ (quote (quote ()))         NIL]
     [`(cons  ,car ,cdr)  `((,CONS ,(compile car)) 
                            ,(compile cdr))]
     [`(car   ,list)      `(,CAR   ,(compile list))]
