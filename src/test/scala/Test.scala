@@ -1,5 +1,6 @@
 import java.io.File
 import scala.io.Source
+import scala.language.postfixOps
 
 //import org.scalatest._
 
@@ -25,7 +26,7 @@ object Test {
       // Run test
       var out = Main.compile(in)
 
-      if(out == answer) {
+      if(SExp.from(out) == SExp.from(answer)) {
         println(file.getName + ": Good")
       } else {
         println(file.getName + ": Error")
